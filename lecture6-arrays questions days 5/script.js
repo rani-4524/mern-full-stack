@@ -21,7 +21,7 @@ function subarraySum (arr) {
 
 console.log("Sum of all subarrays of ", arr, "is", subarraySum(arr));
 
-/* ================== DELETIONS IN ARRAY */
+/* ================== DELETIONS IN ARRAY ========================== */
 /* Ques: delete the last element of the array */
 
 //Using slice() -> doesn't change the array, until assigned to array itself
