@@ -76,11 +76,11 @@ for(let i=0;i<students.length;i++){
    console.log(i+1,students[i]);    
 }
 
-// Arrays using for in loop
+//Arrays using for in loop
 
-// for(let i in students){
-//     console.log(students[i]);
-// }
-// for(let i in students){
-//     console.log(Number(i)+1,students[i]);
-// }
+for(let i in students){
+    console.log(students[i]);
+}
+for(let i in students){
+    console.log(Number(i)+1,students[i]);
+}

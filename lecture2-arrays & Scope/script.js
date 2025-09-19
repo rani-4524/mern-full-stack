@@ -66,6 +66,7 @@ function average(num){
 
 console.log(average(array1));
 
+
 /*Q2. given an array-->[4,10,20,14] anr r=4
 find nCr of each element of this array
 nCR=n!/[(n-r)! * r!]
