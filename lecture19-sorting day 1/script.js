@@ -42,3 +42,20 @@ function bubbleSort(arr){
 
 let A1=[1,4,3,2,1,2,5];
 console.log(bubbleSort(A1));
+
+//selection sort 
+function selectionSort(arr,n){
+    for(let i=0;i<n;i++){
+        let minIndex=i;
+        for(let j=i+1;j<n;j++){
+            if(arr[j]<arr[minIndex]){
+                minIndex=j;
+            }
+        }
+        [arr[minIndex],arr[i]]=[arr[i],arr[minIndex]];
+
+    }
+    return arr;
+}
+let A2=[1,4,3,2,1,2,5];
+console.log(bubbleSort(A2));
