@@ -69,7 +69,7 @@ function insertionSort(arr){
     let n=arr.length;
     for(let i=0;i<n;i++){
         let  j=i;
-        while(j>0 && arr[j-1]>arr[j]){
+        while(j>=0 && arr[j-1]>arr[j]){
             [arr[j-1],arr[j]]=[arr[j],arr[j-1]];
             j--;
         }
@@ -80,7 +80,7 @@ function insertionSort(arr){
 let arrr1=[1,2,7,9,3,4,-5];
 console.log("Insertion Sort",insertionSort(arrr1));
 
-//insertion sort uding shifting element 
+//insertion sort using shifting element 
 
 function insertionSortArray(arr){
     let n=arr.length;
@@ -98,3 +98,49 @@ function insertionSortArray(arr){
 
 let arrr2=[6,5,4,8,9,-3,1,2];
 console.log("Insertion Sort Array",insertionSortArray(arrr2));
+
+
+// //Insertion sort 
+// function insertAnElement(arr){
+//     let n=arr.length;
+//     let lastElement=arr[n-1];
+//     let indexToInsert=0;
+    
+//     for(let i=n-2;i>=0;i--){
+//         if(arr[i]>lastElement){
+//             arr[i+1]=arr[i];
+//         }else{
+//             indexToInsert=i+1;
+//             break;
+//          }
+//     }
+//     arr[indexToInsert]=lastElement;
+//      return arr;
+// }
+
+// let arr=[3,1,6,2,8,7,4];
+// console.log("sorted array using insertion sort:" + insertAnElement(arr).join(" "));
+
+//Insertion Sort
+
+function insertionSortedArray(arr){
+    let n=arr.length;
+    let ind=0;
+    for(let i=1;i<n;i++){
+        let firstElemOfUnsortedPart=arr[i];
+        let indexToInsert=0;
+        for(let j=ind;j>=0;j--){
+            if(arr[j]>firstElemOfUnsortedPart){
+                arr[j+1]=arr[j];
+            }else{
+                indexToInsert=j+1;
+                break;
+            }
+        }
+        arr[indexToInsert]=firstElemOfUnsortedPart;
+        ind++;
+    }
+    return arr;
+}
+let arr1=[3,1,6,2,8,7,4];
+console.log("sorted array using insertion sort:" + insertionSortedArray(arr1).join(" "));
