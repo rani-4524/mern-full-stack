@@ -1,31 +1,58 @@
 // //Given two sorted arrays A=[1,3,4,7,10] & B=[2,9,12] merge them
+// function mergeSortedArrays(A,B){
+//     let n=A.length;
+//     let m=B.length;
+//     let i=0;
+//     let j=0;
+//     let k=0;
+//     let ans=new Array(n+m);
+//     while(i<n && j<m){
+//         if(A[i]<B[j]){
+//             ans[k]=A[i];
+//             i++;
+//         }else{
+//             ans[k]=B[j];
+//             j++;
+//         }
+//         k++;
+//     }
+//     while (i < n) {
+
+//         ans[k]=A[i];
+//         i++;
+//         k++;
+//     }
+//     while (j < m) {
+//        ans[k]=B[j];
+//         j++;
+//         k++;
+//     }
+//     return ans;
+// }
+
 function mergeSortedArrays(A,B){
     let n=A.length;
     let m=B.length;
     let i=0;
     let j=0;
-    let k=0;
-    let ans=new Array(n+m);
+
+    let ans=[];
     while(i<n && j<m){
         if(A[i]<B[j]){
-            ans[k]=A[i];
+            ans.push(A[i]);
             i++;
         }else{
-            ans[k]=B[j];
+            ans.push(B[j]);
             j++;
         }
-        k++;
     }
     while (i < n) {
-
-        ans[k]=A[i];
+       ans.push(A[i]);
         i++;
-        k++;
     }
     while (j < m) {
-       ans[k]=B[j];
+        ans.push(B[j]);
         j++;
-        k++;
     }
     return ans;
 }

@@ -95,4 +95,3 @@ const arr2=[[1,3],[2,1],[1,2],[2,4]];
 arr2.sort((a,b)=>(a[0]-b[0]));
 console.log("Sorted Array:" ,arr2);
   
-

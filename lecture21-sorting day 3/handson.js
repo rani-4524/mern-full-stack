@@ -4,12 +4,10 @@ function sort(arr){
     let pivot=arr[n-1];
     let ind=0;
     for(let i=0;i<n;i++){
-        for(let j=ind;j<n;j++){
-            if(arr[j]>pivot){
-                [arr[i],arr[ind]]=[arr[ind],arr[i]];
-                ind++;
-            }
-        }
+        if(arr[i]>pivot){
+            [arr[i],arr[ind]]=[arr[ind],arr[i]];
+            ind++;
+        } 
     }
     [arr[ind],arr[pivot]]=[arr[pivot],arr[ind]];
     return pivot;
