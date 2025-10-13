@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form novalidate>
+    <div>
+    <label for="name">Name</label>
+    <input id="name" type="text" name="name" placeholder="Enter your Full Name" required autocomplete="name">
+    </div>
+
+    <div>
+    <label for="email">Email</label>
+    <input id="email" type="email" placeholder="Enter your Email" required autocomplete="email">
+    </div>
+    
+    <div>
+    <label for="phone">Phone</label>
+    <input id="phone" type="number" placeholder="Enter without country code" required autocomplete="number">
+    </div>
+
+    <div>
+    <label for="birth">Date Of Birth</label>
+    <input  id="birth" name="birth" type="date">
+    </div>
+
+    <div>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" placeholder="atleast 6 digits"> 
+    </div>
+    
+    <div>
+    <label for="">Graduation Year</label>
+    <select name="grad-year" id="grad-year">
+        <option value="">2020</option>
+        <option >2021</option>
+        <option >2023</option>
+        <option >2024</option>
+    </select>
+   </div>
+
+   
+    <div>
+    <label for="country">Country</label>
+    <select name="country" id="country">
+        <option value="">Select a country</option>
+        <option >India</option>
+        <option >China</option>
+        <option >America</option>
+        <option >UK</option>
+    </select>
+    </div>
+
+    <div>
+    <label for="cities">Cities</label>
+    <select name="cities" id="cities" multiple size="3">
+        <option value="">Select a City</option>
+        <option >Mumbai</option>
+        <option >Pune</option>
+        <option >Nagpur</option>
+        <option >Banglore</option>
+    </select>
+    </div> 
+
+    <div>
+    <button type="submit">Submit</button>
+    </div>
+   </form>
+
+   <div>
+    <h2>List of fruits</h2>
+    <p id="mango" data-product-id="abc1">Mango- <span>10</span></p>
+    <p id="banana" data-product-id="abc2">Banana- <span>20</span></p>
+    <p id="apple" data-product-id="abc3">Apple- <span>30</span></p>
+   </div>
+   <script>
+    let mango=document.getElementById("mango");
+    console.log(mango.dataset.productId);
+    mango.dataset.color="orange";
+    console.log(mango.dataset.color);
+    let banana=document.getElementById("banana");
+    console.log(banana.dataset.productId);
+    let apple=document.getElementById("apple");
+    console.log(apple.dataset.productId);
+   </script>  
+</body>
+</html>

@@ -174,3 +174,68 @@ function reverseOddColumns(arr){
 }
 
 reverseOddColumns(arrr4);
+
+//print the multiplication of 2D array
+function printMultiplicationOf2DArray(arr1,arr2,n){
+    let result=[];
+    for(let i=0;i<n;i++){
+        result[i]=[];
+        for(let j=0;j<n;j++){
+            result[i][j]=0;
+            for(let k=0;k<n;k++){
+                result[i][j]+=arr1[i][k]*arr2[k][j];
+            }
+        }
+    }
+
+    for(let i=0;i<n;i++){
+        console.log(result[i].join(' '));
+    }
+}
+
+let mat1=[
+    [1, 2],
+    [3, 4],
+];
+let mat2=[
+    [5, 6],
+    [7 ,8],
+];
+let n1=mat1.length;
+printMultiplicationOf2DArray(mat1,mat2,n1);
+
+
+//rotate the the 2D array by 90 degree
+
+// function rotate2DArray90Degree(arr1,arr2,n){
+//     for(let i=0;i<n;i++){
+//         for(let j=0;j<n;j++){
+//             let temp=arr1[i][j];
+//             arr1[i][j]=arr2[i][j];
+//             arr2[i][j]=temp;
+//         }
+//     }
+// }
+
+function rotateImage(matrix) {
+  const size = matrix.length;
+  let result = [];
+  for (let i = 0; i < size; i++) {
+    result[i] = [];
+    for (let j = 0; j < size; j++) {
+      // place element from (size-1-j, i) into (i, j)
+      result[i][j] = matrix[size - 1 - j][i];
+    }
+    
+  }
+  for(let i=0;i<size;i++){
+    console.log(result[i].join(' '));
+  }
+  
+}
+mat1=[
+    [7 , 2,  3 ],
+[2 , 3 , 4 ],
+[5 , 6 , 1 ],
+];
+rotateImage(mat1);

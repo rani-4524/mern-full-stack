@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Application for a Security Guard at Vishal Mega Mart</h1>
+    <form novalidate>
+        <div>
+        <label for="name" required="yes">Name</label>
+        <input  id="name" type="text" placeholder="Enter your Name" min required maxlength="50">
+        </div>
+        <br>
+        <div>
+            <label for="email">Email</label>
+            <input id= "email" type="email" placeholder="e.g.rani@abc.com" required autocomplete="email">
+        </div>
+        <br>
+        <div>
+            <label for="phone">Phone No.</label>
+            <input id="number" type="number" placeholder="Enter 10 Digits" required autocomplete="number">
+        </div>
+        <br>
+        <div>
+            <label for="location">Loaction</label>
+            <select name="lacation" id="lacation" required="">
+                <option value="">Select location</option>
+                <option >Baner</option>
+                <option >Kharadi</option>
+                <option >Viman Nagar</option>
+                <option >Hadapsar</option>
+                <option >Hinjewadi</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="resume upload">Resume</label>
+            <input id="resume" type="file">
+        </div>
+        <br>
+        <div>
+            <label for="exceptedsalary">Excepted Salary</label>
+            <input id="salary" type="number" placeholder="in LPA">
+        </div>
+       <br>
+       <div>
+        <label for="currentctc">Current CTC</label>
+        <input id="ctc" type="number" placeholder="in LPA">
+       </div>
+       <br>
+        <div>
+            <label for="prevexperience">Previous Experience</label>
+            <input type="radio" name="experience" id="experience" value="yes">Yes
+            <input type="radio" name="experience" id="experience" value="No"> No
+        </div>
+        <br>
+        <div>
+            <label for="shift">Shift Preference</label>
+            <input type="checkbox" name="shift" id="shift" >Night
+            <input type="checkbox" name="shift" id="shift" >Morning
+        </div>
+        <br>
+        <div>
+            <label for="joiningdate">Joining Date</label>
+            <input type="date" name="joiningdate" id="joiningdate">
+        </div>
+        <br>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>

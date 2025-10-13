@@ -1,0 +1,70 @@
+:root{
+    --btn-color:blue;
+    --bg-color:rgb(237, 241, 16);
+    --default-color:green;
+}
+*{
+    box-sizing: border-box;
+     background-color: var(--bg-color);
+}
+
+
+.navbar a{
+    text-decoration: none;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 50px;
+    text-decoration: none;
+    font-size: large;
+}
+
+.gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+
+}
+.gallery h2{
+    text-align: center;
+    color: darkred;
+    text-decoration: dashed;
+}
+.gallery p{
+    text-align: center;
+    color: darkred;
+}
+   
+.card{
+    /* grow,shrink,width  */
+    flex: 0 1 250px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.53);
+    border: darkred;
+    background-repeat: inherit;
+    
+    
+} 
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    text-overflow: clip;
+    text-shadow: 0ch;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    color: darkred;
+    font-style: oblique;
+   
+}
+
+img{
+   border-radius: 50%;
+   
+}
