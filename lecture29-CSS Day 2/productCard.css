@@ -2,18 +2,18 @@
 #product h2 {
     font-size: 20px;
     margin: 15px 0 5px;
-    color: #333;
+    color: gray;
 }
 
 #product button:hover {
-      background-color: #a70404;
+      background-color: red;
     }
 #product h3{
     text-align: center;
 }
  #product {
       background-color: white;
-      border: 1px solid #ddd;
+      border: 1px solid white;
       border-radius: 10px;
       padding: 20px;
       width: 250px;
@@ -28,7 +28,7 @@
     border-radius: 10px;
 }
  #product button {
-    background-color: #007bff;
+    background-color: darkcyan;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -40,6 +40,6 @@
 
 #product p {
     font-size: 18px;
-    color: #007b00;
+    color: green;
     margin-bottom: 15px;
 }
