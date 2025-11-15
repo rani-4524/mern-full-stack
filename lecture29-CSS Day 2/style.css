@@ -45,6 +45,7 @@
     /* grow,shrink,width  */
     flex: 0 1 250px;
     border-radius: 20px;
+    /* 15 px is for blur radius */
     box-shadow: 5px 5px 15px rgba(0,0,0,0.53);
     border: darkred;
     background-repeat: inherit;
@@ -66,5 +67,6 @@ h1{
 
 img{
    border-radius: 50%;
+   object-fit: cover;
    
 }
