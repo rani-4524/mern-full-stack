@@ -1,0 +1,34 @@
+<!-- Create a yellow circle with radius 40 at the center of the SVG. -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 900px;
+            width: 900px;
+            margin: 20px auto;
+            background-color: aquamarine;
+            border: 2px solid black;
+        }
+
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Circle</h1>
+    <div class="container">
+        <svg viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="40" fill="green" stroke="black"></circle>
+            <circle cx="150" cy="150" r="120" fill="red"/>
+            <circle cx="150" cy="150" r="90" fill="white"/>
+            <circle cx="150" cy="150" r="60" fill="red"/>
+            <circle cx="150" cy="150" r="30" fill="white"/>
+        </svg>
+    </div>
+</body>
+ </html>

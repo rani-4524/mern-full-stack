@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    /* background-color: aqua; */
+}
+
+.container{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    /* border-radius: 50%; */
+    background-color: aqua;
+    margin: 0 auto;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; */
+    gap: 50px;
+    border-radius: 50%;
+    animation-name: animation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+.animation1{
+    animation-delay: 2s;
+}
+
+/* .container .box{
+     margin: 300px auto; 
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: red;
+} */
+
+.animation2{
+    animation-delay: 4s;
+}
+.animation3{
+    animation-delay: 6s;
+}.animation4{
+    animation-delay: 8s;
+}.animation5{
+    animation-delay: 9s;
+}
+
+@keyframes animation{
+    from{
+        transform: translateY(100px);
+    }
+}

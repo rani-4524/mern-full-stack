@@ -1,0 +1,76 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+.container{
+    background-image: url('https://images.pexels.com/photos/290595/pexels-photo-290595.jpeg?cs=srgb&dl=pexels-pixabay-290595.jpg&fm=jpg');
+    margin: 150px;
+    height: 700px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-color: aqua;
+}
+
+.container .box img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    background-color:red;
+    margin-bottom:0;
+    margin-left: 0;
+    border-radius: 50%;
+}
+
+body:hover .box{
+   margin-left: 85%;
+   margin-bottom: 85%;
+   /* background-color: red; */
+}
+
+.box{
+    transition-property: margin;
+    transition-timing-function: ease-in-out;
+    transition-duration: 2s;
+} 
+
+
+/* using positon */
+/* 
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+    height: 100%;
+    width: 100%;
+     background-image: url('https://images.pexels.com/photos/290595/pexels-photo-290595.jpeg?cs=srgb&dl=pexels-pixabay-290595.jpg&fm=jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+}
+
+body:hover .box{
+    left: 100%;
+    bottom: 100%;
+}
+
+.box{
+    transition-property: all;
+    transition-duration: 3s;
+} */

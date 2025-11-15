@@ -1,0 +1,45 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    padding: 120px;
+}
+
+.container .box{
+    height: 200px;
+    width: 200px;
+    margin-bottom: 50px;
+    background-color: aquamarine;
+    border: solid black;
+    border-width: 5px;
+}
+body:hover .box{
+    /* width: 500px;
+    background-color: red; */
+    /* transform: scale(0.4, 1.5);  0.4 gets applied in x-axis (j=horizontally)& 1.5 gets applied in y-axis*/
+    /* transform: scale(2); */
+    /* transform: rotate(45deg);  rotate clockwise */
+    transform: rotate(-45deg); /*rotate anticlockwise */
+    /* transform: rotate(0.5turn); 1turn means 360 degree */
+    transform:skew(45deg);
+    transform:translate(100%);
+    transform:translate(400px);
+    transform: translate(-50% , 200px);
+
+    /* x- negative=left */
+    /* x- positive=right */
+    /* y- negative=dowm */
+    /* y- positive=up */
+
+
+    /* NOTE: we can combine all the transform attributes */
+    /* NOTE: try to find and understand these two transforms */
+    transform: translate(200px) rotate(90deg);
+    transform:rotate(90deg) translate(200px);
+}
+
