@@ -1,0 +1,64 @@
+/* .profile-card{
+	position:fixed;
+	width:300px;
+	display:flex;
+	justify-content:center;
+}
+
+.profile-card img{
+	height:100px;
+	width:100px;
+	object-fit:cover;
+	align-self:flex-start;
+
+}
+
+h2{
+	font-size:larger;
+}
+
+p{
+	font-size:smaller;
+} */
+
+/* Style for the overall profile card */
+.profile-card {
+  position: relative;            /* Enables positioning of inner elements */
+  width: 300px;                  /* Fixed width */
+  margin: 50px auto;             /* Centers the card horizontally */
+  padding: 20px;                 /* Adds inner spacing */
+  background-color: #f5f5f5;     /* Light gray background */
+  border-radius: 10px;           /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  /* Soft shadow */
+  text-align: left;              /* Align text to the left */
+}
+
+/* Style for the profile picture */
+.profile-card img {
+  position: absolute;            /* Positioning within the card */
+  top: 20px;                     /* Distance from top */
+  left: 20px;                    /* Distance from left */
+  width: 100px;                  /* Image width */
+  height: 100px;                 /* Image height */
+  border-radius: 50%;            /* Makes it circular */
+  object-fit: cover;             /* Ensures image fits nicely */
+}
+
+/* Style for the user's name */
+.profile-card h2 {
+  position: absolute;
+  top: 140px;                    /* Positioned below the image */
+  left: 20px;
+  font-size: 20px;               /* Larger font for the name */
+  margin: 0;
+}
+
+/* Style for the user's bio */
+.profile-card p {
+  position: absolute;
+  top: 170px;                    /* Slightly below the name */
+  left: 20px;
+  font-size: 14px;               /* Smaller font for bio */
+  color: #555;                   /* Gray text */
+  width: 260px;                  /* Keep text inside the card */
+}

@@ -1,0 +1,89 @@
+/* *{
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+}
+
+.menu{
+	display:flex;
+	justify-content:center;
+}
+
+.logo{
+	text-align:left;
+}
+
+.links{
+	display:flex;
+	justify-content:space-around;
+
+}
+
+.cta{
+	text-align:right;
+}
+
+@media (min-width:600px){
+	.links{
+		flex-wrap:wrap;
+	}
+} */
+
+/* Base styles for the navigation bar */
+.menu {
+  display: flex;
+  justify-content: space-between;   /* Logo left, links center, button right */
+  align-items: center;
+  flex-wrap: wrap;                  /* Allow wrapping on smaller screens */
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+}
+
+/* Logo on the left */
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Centered navigation links */
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* "Sign Up" button on the right */
+.cta {
+  padding: 8px 16px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Responsive behavior: screen width ≤ 600px */
+@media (max-width: 600px) {
+  .menu {
+    justify-content: center;       /* Center everything horizontally */
+  }
+
+  .links {
+    width: 100%;
+    justify-content: center;       /* Center links below logo and button */
+    order: 2;                      /* Links appear after logo and button */
+    margin-top: 10px;
+  }
+
+  /* Reverse logo and button order visually without changing HTML */
+  .logo {
+    order: 3;                      /* Appears after button */
+  }
+
+  .cta {
+    order: 1;                      /* Appears before logo */
+  }
+}

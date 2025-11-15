@@ -1,0 +1,100 @@
+
+
+/* General styles for all banners */
+/* .banner {
+  width: 120px;
+  height: 80px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Individual banner colors 
+.a { background-color: #ff6b6b; }  /* Red 
+.b { background-color: #4ecdc4; }  /* Teal 
+.c { background-color: #1a535c; }  /* Dark blue 
+
+/* Flex container setup 
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;            /* Fill full viewport height 
+  width: 100vw;
+  position: relative;
+}
+
+/* Position banners using absolute positioning inside container 
+.a {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.b {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center perfectly 
+}
+
+.c {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+} */
+
+
+/* ******************************************USING GRID*************************** */
+
+/* General styles for banners */
+.banner {
+  width: 120px;
+  height: 80px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.a { background-color: #ff6b6b; }
+.b { background-color: #4ecdc4; }
+.c { background-color: #1a535c; }
+
+/* Grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "A . ."
+    ". B ."
+    ". . C";
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 100vh;   /* Full viewport height */
+  width: 100vw;
+}
+
+/* Place banners in respective grid areas */
+.a {
+  grid-area: A;
+  justify-self: start;
+  align-self: start;
+  margin: 20px;
+}
+
+.b {
+  grid-area: B;
+  justify-self: center;
+  align-self: center;
+}
+
+.c {
+  grid-area: C;
+  justify-self: end;
+  align-self: end;
+  margin: 20px;
+}
