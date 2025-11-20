@@ -1,0 +1,22 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn{
+    padding: 15px 30px;
+    font-size: 20px;
+    background: royalblue;
+    color: white;
+    border: none;
+    transition: background 0.3s, transform 0.3s;
+    margin: 10px 20px;
+}
+
+.btn:hover{
+    background: darkblue;
+    transform: scale(1.1);
+}

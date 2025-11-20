@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Practice File</title>
+    <style>
+        .box, .card, .class-1, .menu, .panel {
+            border: 1px solid gray;
+            padding: 10px;
+            margin: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+        .active {
+            background-color: lightcoral;
+        }
+        .zoom {
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+        .done {
+            text-decoration: line-through;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="mybox">Hello</div>
+    <button class="btn1">textContent</button>
+    <button class="btn2">innerHtml</button>
+
+    <h1>DOM Practice Playground</h1>
+
+    <!-- Paragraphs -->
+    <p class="first-para">This is the first paragraph.</p>
+    <p class="second-para">This is the second paragraph.</p>
+    <p class="third-para">This is the third paragraph.</p>
+    <button id="btn">toggle</button>
+    <br><br>
+
+    <!-- Image -->
+    <img src="image 1.png" alt="Photo" width="150" height="150">
+
+    <!-- Divs -->
+    <div class="box">
+        <h3>Box Parent</h3>
+        <div class="first-div">Child Div 1</div>
+        <div id="second-div">Child Div 2</div>
+        <div class="first-div-child">Child Div 3</div>
+    </div>
+
+    <!-- Classes for classList and className practice -->
+    <div class="class-1 class-2 class-3">Class Practice Div</div>
+
+    <!-- List for querySelectorAll -->
+    <ul class="menu">
+        <li class="item">Home</li>
+        <li class="item">About</li>
+        <li class="item">Contact</li>
+    </ul>
+
+    <!-- Gallery Panel -->
+    <div class="panel">Panel 1</div>
+    <div class="panel">Panel 2</div>
+    <div class="panel">Panel 3</div>
+
+    <!-- Cards for cloning, toggling class -->
+    <div class="card">
+        <h4>Card Title</h4>
+        <p>Card Content</p>
+    </div>
+
+    <!-- Todo Section -->
+    <h2>Todo App</h2>
+    <input type="text" id="todo-input" placeholder="Enter task">
+    <button id="add-btn">Add Task</button>
+    <ul id="todo-list"></ul>
+
+    <!-- Button for class toggle -->
+    <button id="toggle-btn">Toggle Active State</button>
+
+    <!-- Button to create notification -->
+    <button id="notify-btn">Show Notification</button>
+
+    <script src="handson.js"></script>
+</body>
+</html>

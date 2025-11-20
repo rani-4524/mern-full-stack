@@ -1,0 +1,39 @@
+/* *,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ball{
+    width: 50px;
+    height: 50px;
+    background: orange;
+    border-radius: 50%;
+    animation: moveBall 3s ease-in-out infinite;
+}
+
+@keyframes moveBall {
+    from{
+        transform: translateX(0);
+    }
+    to {
+        transform: translateY(200px);
+    }
+} */
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: hotpink;
+  animation: crazyMove 4s linear infinite;
+}
+
+@keyframes crazyMove {
+  0%   { transform: translateX(0); background: hotpink; }
+  25%  { transform: translateX(150px); background: orange; }
+  50%  { transform: translate(150px, 150px); background: yellow; }
+  75%  { transform: translate(0, 150px); background: green; }
+  100% { transform: translate(0, 0); background: hotpink; }
+}
