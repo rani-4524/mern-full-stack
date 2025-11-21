@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="password"><br>
+    <input type="date"><br>
+    <input type="time"><br>
+
+   <input type="checkbox">
+   <input type="checkbox">
+   <input type="checkbox">
+   <input type="checkbox">
+  <br>
+   <input type="radio" name="mcq" value="optionA" >
+   <input type="radio" name="mcq" value="optionB">
+   <input type="radio" name="mcq" value="optionC">
+   <input type="radio" name="mcq" value="optionD"> <br>
+
+   <input type="radio" name="mcq2" value="optionA" >
+   <input type="radio" name="mcq2" value="optionB" >
+   <input type="radio" name="mcq2" value="optionC" >
+   <input type="radio" name="mcq2" value="optionD" > <br>
+
+   <select >
+    <option value="">Select Option</option>
+    <option >A</option>    
+    <option >B</option>    
+    <option >C</option>    
+    <option >D</option>    
+</select> 
+   <select multiple="true" size="4">
+    <option value="">Select Option</option>
+    <option >A</option>    
+    <option >B</option>    
+    <option >C</option>    
+    <option >D</option>    
+</select> 
+
+<input type="file">
+<input type="button" value="submit" id="btn">
+
+<script>
+    const submitBtn = document.querySelector("#btn");
+  
+    submitBtn.addEventListener("click" , ()=>{
+        
+        const inputs ={};
+
+        inputs.password = document.querySelector("input[type=password]").value;
+        
+        inputs.date = document.querySelector("input[type=date]").value;
+         
+        inputs.time = document.querySelector("input[type=time]").value;
+         
+        inputs.checkbox = document.querySelectorAll("input[type=checkbox]:checked");
+        
+        inputs.radio = document.querySelector("[name=mcq]:checked")?.value;
+        
+        inputs.radio2 = document.querySelector("[name=mcq2]:checked")?.value;  
+
+        inputs.select = document.querySelector("select").value;
+
+        const multiselect = document.querySelector("[multiple=true]").options;
+
+        inputs.multiselected= Array.from(multiselect)
+         .filter((ele)=> ele.selected)
+         .map((ele) => ele.value);
+        console.log(inputs);    
+        
+        inputs.file = document.querySelector("[type=file]").value;
+
+        // FileReader  
+        // dataURL
+        
+
+    });
+</script>
+</body>
+</html>
