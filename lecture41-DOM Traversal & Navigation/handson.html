@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- table  -->
+    <table id="mytable" border="1">
+        <thead>
+            <tr>
+                <td class="cell">1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>11</th>
+                <th>12</th>
+                <th>13</th>
+                <th>14</th>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- List -->
+     <ul id="menu">
+        <li>Home</li>
+        <li>Products
+            <ul>
+                <li id="target">Mobile</li>
+                <li>Laptop</li>
+            </ul>
+        </li>
+        <li>Contact</li>
+     </ul>
+
+    <script>
+        // getting the parent of an element
+        const cell = document.querySelector(".cell");
+        console.log(cell.parentElement);
+
+        console.log(cell.parentElement.parentElement);
+
+        // childNodes & children
+        const table = document.querySelector("#mytable");
+        console.log(table.childNodes);
+        console.log(table.children);
+
+        console.log(table.firstElementChild);
+        console.log(table.lastElementChild);
+
+        // accessing second child
+        console.log(table.children[0]);
+        console.log(table.children[1]);
+        
+        const row = document.querySelector("tr");
+        console.log(row.children);
+        console.log(row.firstElementChild);
+        console.log(row.lastElementChild)
+
+        // iterating through all the children
+        for(let item of table.children){
+            console.log(item);
+        }
+        
+        // sibling
+        console.log(cell.nextElementSibling);
+        console.log(cell.nextElementSibling.nextElementSibling);
+        console.log(cell.previousElementSibling);
+
+        console.log("previous sibling : " , cell.previousElementSibling)
+        console.log("next sibling : " , cell.nextElementSibling);
+
+        // closest
+        console.log(cell.closest("table"));
+        console.log(cell.closest("tr"));
+        console.log(cell.closest("#mytable"));
+        
+        const item = document.querySelector("#target");
+
+        // find parent elements
+        console.log(item.parentElement);
+        console.log(item.parentElement.parentElement);
+
+        // find siblings
+        console.log(item.nextElementSibling)
+        console.log(item.nextElementSibling.nextElementSibling);
+
+        // find children
+        const li = item.parentElement.parentElement;
+        console.log(li.children);
+        console.log(li.firstElementChild);
+        console.log(li.lastElementChild);
+
+        // find closest
+
+
+    </script>
+</body>
+</html>
