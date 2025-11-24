@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 20px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Counter Application</h1>
+        <div>
+            <p>0</p>
+            <span>Level 0:</span>
+            <button id="increase">Increse</button>
+            <button id="decrease">Decrese</button>
+        </div>
+        <br><br>
+        <hr>
+        <span class="span">Select Your Theme</span>
+        <button id="light">Light</button>
+        <button id="dark">Dark</button>
+
+        <button id="add-count">Add Count</button>
+    </div>
+
+
+    <script>
+
+        const state={
+            theme:"dark",
+            level:0
+        }
+
+        const counter={
+            count:0,
+
+            elements:{
+                increaseBtn: document.querySelector("#increase"),
+                decreaseBtn: document.querySelector("#decrease"),
+                showCount:document.querySelector("p"),
+                lightTheme:document.querySelector("#light"),
+                darkTheme:document.querySelector("#dark"),
+                showLevel:document.querySelector("div > span"),
+                h1Ele:document.querySelector("h1"),
+                span:document.querySelector(".span"),
+            },
+
+            updateLevel(newCount){
+                if(newCount>10){
+                    this.level="pro";
+                }
+                else if(newCount>5){
+                    this.level="Intermediate";
+                }
+                else if(newCount>0){
+                    this.level="beginner";
+                }
+                else{
+                    this.level=0;
+        
+                }
+
+                this.elements.showLevel.textContent="Level: " + this.level;
+                state.level=this.level;
+
+                this.elements.decreaseBtn.disabled=(newCount===0);
+            },
+
+            updateCount(newCount){
+                this.elements.showCount.textContent = newCount;
+                this.updateLevel(newCount);
+              
+            },
+
+            events(){
+                this.elements.increaseBtn.addEventListener('click' ,(e)=>{
+                    e.preventDefault();
+                    this.count++;
+                    this.updateCount(this.count);
+                });
+                this.elements.decreaseBtn.addEventListener('click' ,(e)=>{
+                    e.preventDefault();
+                    this.count--;
+                    this.updateCount(this.count);
+                });
+                this.elements.lightTheme.addEventListener('click' , (e)=>{
+                    e.preventDefault();
+                    document.body.style.backgroundColor="white";
+                    this.elements.h1Ele.style.color="black";
+                    this.elements.showCount.style.color="black";
+                    this.elements.showLevel.style.color="blue";
+                    this.elements.span.style.color="black";
+                    this.updateLevel(this.count);
+                });
+                this.elements.darkTheme.addEventListener('click' ,(e)=>{
+                    e.preventDefault();
+                    document.body.style.backgroundColor="black";
+                    this.elements.h1Ele.style.color="white";
+                    this.elements.showCount.style.color="white";
+                    this.elements.showLevel.style.color="Yellow";
+                    this.elements.span.style.color="white";
+                    this.updateLevel(this.count);
+                });
+            },
+
+        };
+        counter.events();
+        
+        
+        
+    </script>
+
+</body>
+</html>

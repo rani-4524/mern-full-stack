@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* height: 100vh;
+            width: 100vw; */
+            background-color: antiquewhite;
+            font-size: 1.5rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .gallery{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            gap: 24px;
+            padding: 40px;
+            border: 1px solid black;
+            margin: auto;
+            max-width: 1000px;
+        }
+        .gallery .btn{
+            text-align: center;
+            padding: 10px;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            color: white;
+            background-color: darkblue;
+            cursor: pointer;
+        }
+        .card{
+           background-color: #fff;
+           border-radius: 10px;
+           text-align: center;
+           padding: 10px;
+           box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
+           transition: box-shadow 0.3s;
+        }
+
+        .card button{
+            text-align: center;
+            padding: 10px 20px;
+       
+            font-size: 1rem;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            color: white;
+            background-color: darkblue;
+            cursor: pointer;
+        }
+        .title{
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            
+        }
+
+        .price{
+            columns: #888;
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <button class="btn">Show all products</button>
+       <!--  <div class="card">
+            <div class="title">${products.title}</div>
+            <div class="price">${products.price}</div>
+            <button>Add to Cart</button> 
+        </div> -->
+    </div>
+
+
+    <script>
+        const product= [
+            {
+                title:"Laptop",
+                price:60000,
+            },
+            {
+                title:"Mobile",
+                price:10000,
+            },
+            {
+                title:"Watch",
+                price:6000,
+            },
+            {
+                title:"Bottle",
+                price:100,
+            },
+            {
+                title:"Bag",
+                price:1000,
+            },
+            {
+                title:"Shoes",
+                price:5000,
+            },
+        ];
+
+        const button = document.querySelector("button");
+        const div=document.querySelector(".gallery");
+        button.addEventListener('click' , (e)=>{
+            e.preventDefault();
+            product.forEach((item)=>{
+                 const divEle = document.createElement("div");
+                divEle.classList.add("card");
+                divEle.innerHTML = ` <div class="card">
+            <div class="title">${item.title}</div>
+            <div class="price">${item.price}</div>
+            <button>Add to Cart</button> 
+        </div>`;
+            
+                div.appendChild(divEle);
+            })
+        })
+    </script>
+</body>
+</html>
